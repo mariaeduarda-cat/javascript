@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var mochila = [], mochila1 = [], mochila2 = [];
+       
+        mochila1.push('faca');
+        mochila1.push('corda');
+        mochila1.push('lanterna');
+        mochila1.push('luva');
+        mochila1.push('serra');
+        mochila1.push('cutelo');
+        mochila1.push('cadeira');
+
+        mochila2.push('arrame');
+        mochila2.push('canivete');
+        mochila2.push('facão');
+        mochila2.push('arma');
+        mochila2.push('chave');
+        mochila2.push('moeda');
+
+        mochila1.pop();
+
+        mochila = mochila1.concat(mochila2); // concatena os elementos de dois arrays em outro array
+
+        document.write(mochila[0] + '<br>');
+        document.write(mochila[1] + '<br>');
+        document.write(mochila[2] + '<br>');
+        document.write(mochila[3] + '<br>');
+        document.write(mochila[4] + '<br>');
+        document.write(mochila[5] + '<br>');
+        document.write(mochila[6] + '<br>');
+        document.write(mochila[7] + '<br>');
+        document.write(mochila[8] + '<br>');
+        document.write(mochila[9] + '<br>');
+        document.write(mochila[10] + '<br>');
+        document.write(mochila[11] + '<br>');
+        document.write(mochila[12] + '<br>');
+
+        document.write(`<br> A mochila contém ${mochila.length} elementos.`)
+
+
+    </script>
+</body>
+</html>

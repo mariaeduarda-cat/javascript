@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //var cor = new Array(); 
+        /*var cor = [];
+        cor.push('azul', ' vermelho', ' rosa', ' branco', ' roxo');
+        document.write(cor[1], '<br>', cor.length); */
+
+        var mochila = [], pos, item;
+
+        /*var num = [1, 11, 50, 3, 4, 5, 2, 7, 8, 6];
+        var numeros;
+
+        num.sort((a, b) => a - b); // ordem crescente
+        num.reverse(); // ordem decrescente
+
+        numeros = num.join(' / '); // atribui em uma variável elementos de um array juntos em uma string, aceita parâmetros
+        
+        document.write(numeros);*/
+        
+        mochila.push('faca');
+        mochila.push('corda');
+        mochila.push('lanterna');
+        mochila.push('luva');
+        mochila.push('serra'); // insere um elemento no final do array
+        mochila.unshift('cutelo'); // insere um elemento no início do array
+
+        //mochila.pop(); // remove o último elemento do array
+       
+        //mochila.shift(); // remove o primeiro elemento do array
+
+        //mochila.splice(3, 1); // remove um elemento de qualquer lugar do array (posição do elemento, quantos elementos quer remover a partir daquela posição) 
+
+
+        pos = mochila.indexOf(window.prompt("Digite um item: ")); // mostra se o elemento existe naquele array
+
+        if(pos == -1) {
+            document.write("Item não encontrado na mochila!!");
+        } else {
+            document.write(`Item está na mochila <br> Posição: ${pos} `);
+        } 
+
+    </script>
+</body>
+</html>
