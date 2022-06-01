@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var num; // Máximo 10
+
+        try {
+            num = prompt("Digite um valor");
+            if(num > 10) {
+               throw new Error("Valor inválido, o valor máximo é 10");
+            }
+        } catch(e) {
+            console.log("ERRO: " + e.message)
+            num = 10; 
+        } finally {
+            document.write("Valor: " + num);
+        }
+
+
+    /* try {
+        document.writi("Olá Marilene");
+     } catch(e) {
+        document.write("ERRO: " + e.message); //erro explicíto para o usuário
+        console.log("Mensagem de erro: " + e.message) //erro não explicíto 
+     }*/
+
+
+    </script>
+</body>
+</html>
