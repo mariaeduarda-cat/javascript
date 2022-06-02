@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Curso JavaScript</h2>
+    <p>HTML e CSS</p>
+    <h2>Aula 25</h2>
+    <p>www.youtube.com/alanzoka</p>
+    <h2>casimito.com.br</h2>
+
+    <hr>
+
+    <script>
+
+        var tags = document.getElementsByTagName("*"); // * global (pega todas as tags do documento)
+
+        tags[9].innerHTML = "Hello"
+        tags[9].style.color = "red"
+
+       /* for(var i = 0; i < tagsP.length; i++) {
+            tagsP[i].style.color = "red";
+        } */ //Usando o for para mudar por exemplo as cores dos "p"
+        
+    </script>
+</body>
+</html>

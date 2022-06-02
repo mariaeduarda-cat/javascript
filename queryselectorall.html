@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .titulo {
+        color: rgb(206, 79, 79);
+        font-size: 20px;
+        text-decoration: underline;
+    }
+    div {
+        border: 1px solid black;
+        padding: 10px;
+        display: inline-block;
+    }
+    a {
+        display: block;
+    }
+    .quadro {
+        background-color: rgb(224, 216, 216);
+    }
+
+</style>
+<body>
+
+    <h1 class = "titulo">querySelectorAll</h1>
+    <p>O querySelectorAll é um método que retorna os elementos do docuemtno que correspondem a uma classe de CSS ou a uma tag específica.</p>
+    <h2 class = "titulo">Curso Javascript</h2>
+    <p>ww.youtube.com/alanzoka</p>
+    <p class = "titulo">alanzoka.com.br</p>
+    <div>
+        <h3>JavaScript aula 26</h3>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+    <div class="quadro">
+        <h3>JavaScript aula 26</h3>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+    <a href="https://youtu.be/W0nOyrETMOw" target="_blank">CANAL</a>
+    <a href="https://www.twitch.tv/alanzoka" target="_blank">TWITCH</a>
+
+    <hr>
+
+    <script>
+
+        var elementos = document.querySelectorAll("div.quadro > *, h1, h3");
+
+        for(var i = 0; i < elementos.length; i++) {
+          document.write(elementos[i].innerHTML + "<br>"); 
+          elementos[i].style.color = "green"
+        }
+
+          // imprimir elementos de uma classe ou id.
+
+
+    </script>
+</body>
+</html>
