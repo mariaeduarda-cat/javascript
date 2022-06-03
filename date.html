@@ -8,21 +8,31 @@
 </head>
 <body>
 
-
-
-
-
-
     <script>
 
-        
+        var data = new Date();
+
+        var ndata = new Date(1978, 02, 07, 10,10,10,10); //Podemos passar 7 parâmetros: Ano, Mês, Dia, Hora, Min, Seg, Mil.
+        /*ndata.setFullYear(data.getFullYear()+2); Incrementar ou decremetar dias, meses e ano */
 
 
 
+        var dia = ndata.getDate();
+        var mes = ndata.getMonth(); //Segue a notação de vetor(array), ou seja os meses começam em 0 (Janeiro) até 11 (Dezembro).
+        var ano = ndata.getFullYear();
+        var diasem = ndata.getDay();
 
+        var horas = ndata.getHours();
+        var min = ndata.getMinutes();
+        var seg = ndata.getSeconds();
 
+        var meses = new Array("Janeiro", "Fervereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro","Outubro", "Novembro", "Dezembro");
+        var semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
 
+        document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano + "<br>");
+        document.write(horas + ":" + min + ":" + seg);
 
     </script>
+
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var numeros = new Array(10, 2, 54, 27, 36, 10, 4, 7, 2, 190);
+
+        function media(nums) {
+            var tam = nums.length;
+            var soma = 0;
+            for(var i = 0; i<tam; i++) {
+                soma+=nums[i]
+            }
+            return Math.round(soma/tam);
+        }
+        document.write("A média dos números é: " + media(numeros));
+
+
+        function soma2(n1, n2) {
+            return n1+n2;
+        } 
+        var res = soma2(6, 4);
+        document.write(res);
+
+        
+        function soma(n1, n2) {
+            var res = n1 + n2;
+            document.write(`A soma dos valores é: ${res}<br>`);
+        }
+        soma(10, 28);
+        soma(27, 38);
+        soma(24, 7);
+
+
+         function escreve() {
+            document.write("Curso de JavaScript");
+         }
+         escreve();
+        
+
+    </script>
+</body>
+</html>

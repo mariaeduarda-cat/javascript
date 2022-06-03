@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var nomeCor = "Rosa";
+        var i = 0;
+
+        function cor() {
+            var nomeCor = "Azul";
+            document.write(this.nomeCor + "<br>" + nomeCor + "<br>");
+        } //this. se refere a variável global, fora do escopo function
+
+        cor();
+        for(i = 0; i<10; i++) {   
+        }
+       document.write(i + "<br>");
+
+
+
+    </script>
+</body>
+</html>

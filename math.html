@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>   
+
+    /* Valor máximo e minímo de uma sequência
+    var valor = Math.max(1, 2, 3, 4, 5, 6, 7, 8);
+    var valor2 = Math.min(1, 2, 3, 4, 5, 6, 7, 8)
+
+    document.write("Max: " + valor + "<br>Min: " + valor2);
+    */
+
+    /* Cosseno e Seno de ângulos;
+    var angulo = 45;
+    var cen = Math.cos(angulo * Math.PI/180).toFixed(2);
+    var sen = Math.sin(angulo * Math.PI/180).toFixed(2);
+    
+    document.write("Ângulo: " + angulo + "°<br>Cosseno: " + cen + "<br>Seno: " + sen)
+    */
+    
+
+    /* Sorteio de números
+    var valor = 59;
+    for(var i = 0; i<6; i++) {
+      document.write(Math.round((Math.random()*valor)+1)+"<br>");   
+    } */ 
+
+    /*Math.random() -> Retorna um valor aleatório entre algum número, por exemplo:
+
+    var valor = 5;
+
+    var mt = Math.round(Math.random()*valor); //Retorna um valor inteiro aleatório entre 0 e 5
+    */
+    
+    var valor = 4;
+
+    var mt = Math.abs(valor); //Retorna o valor absoluto do número
+    var mt = Math.ceil(valor); //Retorna o número arredondado para cima -> 10.3 - 11
+    var mt = Math.floor(valor); //Retorna o número arredondado para baixo -> 10.2 - 11
+    var mt = Math.round(valor); //Retorna o arredondamento padrão, se for menor que .5, arredonda para baixo, se for maior ou igual que .5, arredonda para cima. 
+    var mt = Math.pow(valor, 2) //Eleva um número a outro: pow(4, 4) = 16
+    var mt = Math.sqrt(9) //Retorna a raiz quadrada de um número  
+
+    document.write(mt)
+    
+
+    </script>
+</body>
+</html>
