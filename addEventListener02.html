@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #dv1 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: salmon;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+</style>
+<body>
+    
+    <div id="dv1">
+
+    </div>
+
+
+    <script>
+      /* As teclas direcionais tem os seguntes códigos:
+      37 = seta esquerda
+      38 = seta para cima
+      39 = seta direita 
+      40 = seta para baixo
+      13 = Enter
+      */
+
+      var px = 0; //deslocamento horizontal
+      var py = 0; //deslocamento vertical
+      
+        function move() {
+            var obj = document.getElementById("dv1");
+            var tecla = event.keyCode; //busca a tecla pressionada
+
+            if(tecla == 37) {
+                px -= 10; //esquerda, subtrai
+                obj.style.left = px + "px";
+            } else if (tecla == 38) {
+                py -= 10;
+                obj.style.top = py + "px";
+            } else if(tecla == 39) {
+                px += 10; //direita, soma
+                obj.style.left = px + "px";
+            } else if(tecla == 40) {
+                py += 10;
+                obj.style.top = py + "px";
+            } else if(tecla == 13) {
+                alert("Evento keydown Removido!!")
+                this.removeEventListener("keydown", move); //this ou document
+                obj.style.backgroundColor = 'white'
+            } 
+        }
+
+        document.addEventListener("keydown", move);
+
+        /*document.addEventListener("keydown", function(event){
+            var obj = document.getElementById("dv1");
+            var tecla = event.keyCode; //busca a tecla pressionada
+
+            if(tecla == 37) {
+                px -= 10; //esquerda, subtrai
+                obj.style.left = px + "px";
+            } else if (tecla == 38) {
+                py -= 10;
+                obj.style.top = py + "px";
+            } else if(tecla == 39) {
+                px += 10; //direita, soma
+                obj.style.left = px + "px";
+            } else if(tecla == 40) {
+                py += 10;
+                obj.style.top = py + "px";
+            }
+            
+        });
+
+*/
+
+    </script>
+</body>
+</html>
