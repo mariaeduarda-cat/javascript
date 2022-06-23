@@ -47,14 +47,36 @@
             py = 0;
             estado = 1; // 1 = movendo, 0 = parada; 
             jog = document.getElementById("jogador"); 
-            jog.addEventListener("click", function(){
-                cancelAnimationFrame(anima);
-            }); 
+            jog.addEventListener("click", moverParar);
+            document.getElementById("bt1").addEventListener("click", mover);
+            document.getElementById("bt2").addEventListener("click", parar);
             game();
         }
         
         function moverParar() {
+            if(estado) {
+                estado = 0;
+                jog.style.backgroundColor = "red";
+                cancelAnimationFrame(anima);
+            } else {
+                estado = 1;
+                jog.styke.backgroundColor = "blue";
+                anima = requestAnimationFrame(game);
+            }
+        }
 
+        function mover() {
+            if(!estado) {
+                estado = 1;
+                jog.style.backgroundColor = "blue";
+                anima = requestAnimationFrame(game);
+            }
+        }
+
+        function parar() {
+            estado = 1;
+            jog.style.backgroundColor = "red";
+            cancelAnimationFrame(anima);
         }
 
         function game() {
@@ -70,19 +92,7 @@
             anima = requestAnimationFrame(game);
         }
 
-        function parar() {
-            jog = document.getElementById("bt2");
-            jog.addEventListener("click", function(){
-                cancelAnimationFrame(anima);
-            }); 
-        }
-
-        function addEventos() {
-            document.getElementById("bt1").addEventListener("click", inicia);
-            document.getElementById("jogador").addEventListener("click", parar);
-        }
-
-        window.addEventListener("load", addEventos);
+        window.addEventListener("load", inicia);
 
     </script>
 </body>
