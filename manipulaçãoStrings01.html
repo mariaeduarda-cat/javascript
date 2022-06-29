@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="txt">CFB Cursos - Curso de Javascript - aula 46, javascript</p>
+    
+      
+    <script>
+
+        var texto = document.getElementById("txt").innerHTML;
+        var txt2 = "/ deixa o like!";
+
+        /*var res = texto.search(/curso/i); //mostra em que posição começa a primeira ocorrência da palavra.
+
+        document.write(res);
+        */
+
+        /*var res = texto.replace(/curso/ig, "aula"); //substitui uma palavra por outra, -i case sensitive -g substitui todas as palavras pela outra.
+
+        document.write(res);
+        */
+
+        /*var res = texto.charAt(23); //indicamos a posição e ele retorna o caractere
+
+        document.write(res);
+        */
+
+        /*var res = texto.charCodeAt(23); //retorna o código da letra referente ao ASCII
+        
+        document.write(res + "<br>")
+        document.write(String.fromCharCode(97)); //retorna o caractere referente ao ASCII.
+        */
+
+        var res = texto.concat(", texto de teste " + txt2); //concatena/junta duas strings, ou pode colocar direto no parâmetro concat, sem precisar de variável ou colocar juntamente com outra variável.
+
+        document.write(res);
+
+    </script>
+
+</body>
+</html>
