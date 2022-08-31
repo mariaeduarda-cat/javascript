@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var res;
+        var nome = prompt("Digite seu nome completo")
+        var nota = prompt("Digite sua nota")
+
+        if(nota > 100) {
+            alert("Nota inválida!");
+            res = "Tente novamente!!";
+        }
+        else if(nota >= 95) {
+            res = "Aprovado com louvor!!"
+        } else if(nota >= 60) {
+            res = "Parabéns, você foi aprovado!!";
+        } else if (nota >= 40) {
+            res = "Recuperação!!";
+        } else if(nota >= 20) {
+            alert('Sinto muito...');
+            res = "Você foi reprovado!!";
+        } else {
+            alert("Agora lascou!!");
+            res = "Reprovado com louvor!!";
+        }
+
+        document.write(res);
+
+    </script>
+
+</body>
+</html>
