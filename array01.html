@@ -19,12 +19,14 @@
         /*var num = [1, 11, 50, 3, 4, 5, 2, 7, 8, 6];
         var numeros;
 
-        num.sort((a, b) => a - b); // ordem crescente
+        num.sort(a, b) => a - b; // ordem crescente dos elementos;
         num.reverse(); // ordem decrescente
 
-        numeros = num.join(' / '); // atribui em uma variável elementos de um array juntos em uma string, aceita parâmetros
-        
-        document.write(numeros);*/
+        numeros = num.join(' / '); // atribui em uma variável elementos de um array juntos em uma string, aceita parâmetros.
+
+        var cores = ["verde", "rosa", "azul", "amarelo", "preto"]
+        var paleta = cores.join("/"); -> verde/rosa/azul/...
+        */
         
         mochila.push('faca');
         mochila.push('corda');
@@ -40,12 +42,12 @@
         //mochila.splice(3, 1); // remove um elemento de qualquer lugar do array (posição do elemento, quantos elementos quer remover a partir daquela posição) 
 
 
-        pos = mochila.indexOf(window.prompt("Digite um item: ")); // mostra se o elemento existe naquele array
+        pos = mochila.indexOf(window.prompt("Digite um item: ")); // mostra se o elemento existe naquele array, -1 significa que o elemento não existe;
 
         if(pos == -1) {
             document.write("Item não encontrado na mochila!!");
         } else {
-            document.write(`Item está na mochila <br> Posição: ${pos} `);
+            document.write("Item está na mochila <br> Posição: " + pos); // ou `${pos}`
         } 
 
     </script>
