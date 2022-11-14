@@ -9,23 +9,45 @@
 <body>
     <script>
 
-        var num = 10;
 
-        //num = num + 1;
-        //num++; -> Para somar 1 ou diminuir 1
-        
-        //num = num + 2
-        //num+=2 -> Para somar 
-        //num*=5 -> Para multiplicar 
+        var mochila = [["Corda", 4], ["Cura", 25], ["Lanterna", 1], ["Pilhas", 20]];
 
-        //num++; pós incremento, realiza primeiro os comandos e incrementa depois
-        //++num; pré incremento, realiza primeiro o incremento e depois realiza os comandos 
+        for(var linha = 0; linha < 4; linha++) {
+            for(coluna = 0; coluna < 2; coluna++) {
+                document.write(mochila[linha][coluna] + " ");
+            }
+            document.write("<br>");
+        }
 
-        //num*=-1; -> inversão do valor
-        //document.write(-num)
+        /*
 
-        document.write(num)
+        var num = [];
 
+        num.push(0);
+        num.push(1);
+        num.push(2);
+        num.push(3);
+        num.push(4);
+
+      
+        document.write(num[0]);
+        document.write(num[1]);
+        .
+        .
+        .
+     Invés de usarmos o document.write para imprimir vcada posição do array, usamos o for
+
+    
+
+        for(cont = 0; cont < 5; cont++) {
+            num.push(prompt("Digite um número"));
+        }
+
+        for(cont = 0; cont < 5; cont++) {
+            document.write(num[cont] + "<br>");
+        }
+
+        */
 
     </script>
 </body>
