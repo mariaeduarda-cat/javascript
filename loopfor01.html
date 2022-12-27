@@ -9,8 +9,15 @@
 <body>
     <script>
 
-
-        var mochila = [["Corda", 4], ["Cura", 25], ["Lanterna", 1], ["Pilhas", 20]];
+/*
+    ESTRUTRA PARA PERCORRER MATRIZES
+    
+        var mochila = [
+            ["Corda", 4], 
+            ["Cura", 25], 
+            ["Lanterna", 1], 
+            ["Pilhas", 20]
+        ];
 
         for(var linha = 0; linha < 4; linha++) {
             for(coluna = 0; coluna < 2; coluna++) {
@@ -35,8 +42,7 @@
         .
         .
         .
-     Invés de usarmos o document.write para imprimir vcada posição do array, usamos o for
-
+     Invés de usarmos o document.write para imprimir cada posição do array, usamos o for!!
     
 
         for(cont = 0; cont < 5; cont++) {
@@ -48,6 +54,20 @@
         }
 
         */
+
+    </script>
+
+
+    <script>
+
+        var mochila = [["Corda", 1], ["faca", 1], ["cura", 20],["lanterna", 1]];
+               
+        for(var linha = 0; linha < 4; linha++) {
+            for(var coluna = 0; coluna < 2; coluna++) {
+                document.write(mochila[linha][coluna] + " ")
+            }
+            document.write("<br>");
+        }
 
     </script>
 </body>
