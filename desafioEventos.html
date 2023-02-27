@@ -19,10 +19,7 @@
 </style>
 <body>
     
-    <div id="dv1">
-
-    </div>
-
+    <div id="dv1"></div>
 
     <script>
 
@@ -30,45 +27,49 @@
         var py = 0;
         var obj;
 
-
         function move() {
             var tecla = event.keyCode; 
 
-            if(tecla == 37) {
+            if(tecla == 37 || tecla == 65) {
                 px -= 10; 
                 obj.style.left = px + "px";
-            } else if (tecla == 38) {
+            } else if (tecla == 38 || tecla == 87) {
                 py -= 10;
                 obj.style.top = py + "px";
-            } else if(tecla == 39) {
+            } else if(tecla == 39 || tecla == 68) {
                 px += 10;
                 obj.style.left = px + "px";
-            } else if(tecla == 40) {
+            } else if(tecla == 40 || tecla == 83) {
                 py += 10;
                 obj.style.top = py + "px";
-            } else if(tecla == 13) {
+            } else if(tecla == 32) {
                 obj.style.backgroundColor = 'white';
-                alert("Evento keydown Removido!!");
+                alert("Evento keydown Removido :(");
                 document.removeEventListener("keydown", move); 
-        }
+            } else if(tecla == 13) {
+                let r = Math.round(Math.random() * 257);
+                let g = Math.round(Math.random() * 257);
+                let b = Math.round(Math.random() * 257);
+                let a = Math.random().toFixed(2);
+
+                obj.style.backgroundColor = "rgba(+ r +", "+ g +", "+ b +", "+ a +)";
+            }
 
     }
 
         function addClique() {
             document.addEventListener("keydown", move);
             obj.style.backgroundColor = 'red';
-            alert("Evento keydown Adicionado! :)")
+            alert("Evento keydown Adicionado :)")
         }
 
         function iniciar() {
             obj = document.getElementById("dv1");
             obj.addEventListener("click", addClique);
-            
         }
 
         window.addEventListener("load", iniciar);
 
-    
     </script>
 </body>
 </html>
