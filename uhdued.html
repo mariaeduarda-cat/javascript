@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>requestAnimationFrame</title>
+  <style>
+    .formatar{
+      position: absolute;
+      border: 5px solid yellow;}
+    #pista{
+      width: 340px;
+      height: 400px;
+      background-color: black;
+      left: 5px;}
+    #fundo{
+      width: 200px;
+      height: 260px;
+      background-color:white;
+      left: 65px;
+      top: 60px;}
+    #car{
+      width:30px;
+      height:30px;
+      border: none;
+      border-radius: 50%;
+      background-color: #ff00ff;
+      left: 15px;
+      top: 15px;}
+    .bt{
+      position: absolute;
+      width: 150px;
+      height: 100px;
+      border-radius:20px;
+      left:25px;
+      top: 20px;
+      color: white;
+      background-color: black;
+      font-size: 40px;}
+    #bt1{
+      top:130px;}
+  </style>
+</head>
+<body>
+  <div id="pista" class="formatar">
+    <div id="fundo" class="formatar">
+      <button id="bt1" class="bt">Parar</button>
+      <button id="bt2" class="bt">Iniciar</button>
+    </div>
+    <div id="car" class="formatar"></div>
+  </div>
+  
+  
+  <script>
+    // Variaveis Nescessarias //
+    var parar= document.getElementById("bt1")
+    var iniciar= document.getElementById("bt2")
+    var carro= document.getElementById("car")
+    var vl, px, py, dx, dy, tomada
+    // ÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷ //
+    
+    // Iniciar variaveis //
+    function inicio(){
+      vl= 3;   tomada=true;// Serve para mudar a funçao de click do carro //
+      dx= 1;   dy= 0;
+      px= 15;  py=15;
+      //------------------------//
+      parar.addEventListener("click",Parada)
+      iniciar.addEventListener("click", Game)
+      carro.addEventListener("click",interruptor)// Depende do estado atual da tomada //
+      Game()//Iniciar Animation Frame//
+    }// ÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷ //
+      inicio()//Jogo ativo no carregamento da pagna//
+   
+    // Estrutura da Animação //
+    function Game(){
+      //Logica de velocidade//
+      px+= dx*vl
+      py+= dy*vl
+      tomada= true
+      //------------------------//
+      //Logica de direção//
+      if(px>295){dx=0; dy=1}
+      if(py>350){dy=0; dx=-1}
+      if(px<15&&py>350){dx=0; dy=-1}
+      if(py<15&&px<295){ dy=0; dx=1}
+      //------------------------//
+      //Chamada do movimento//
+      carro.style.left=px+"px"
+      carro.style.top=py+"px"
+      anima= requestAnimationFrame(Game)
+    }// ÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷ //
+    
+    //Para Animation Frame//
+    function Parada(){
+      cancelAnimationFrame(anima)
+    }// ÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷ //
+    
+    //Função click do carro! decide  inicia ou pausa o movimento! //
+    function interruptor(){
+      switch(tomada){
+        case true: Parada(); tomada= false
+          break;
+        case false: Game(); tomada= true
+          break; }
+    }// ÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷ //
+
+  </script>
+</body>
+</html>
